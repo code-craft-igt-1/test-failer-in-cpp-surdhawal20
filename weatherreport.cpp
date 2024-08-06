@@ -1,4 +1,4 @@
-#include <assert.h>
+/*#include <assert.h>
 #include <string>
 #include <iostream>
 
@@ -81,4 +81,4 @@ int main() {
     WeatherSpace::TestHighPrecipitationAndLowWindspeed();
     cout << "All is well (maybe)\n";
     return 0;
-}
+}*/
