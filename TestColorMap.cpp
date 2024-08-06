@@ -1,18 +1,26 @@
 #include "ColorMap.h"
-#include <gtest/gtest.h>
 #include <vector>
 #include <string>
+#include <gtest/gtest.h>
 
 TEST(ColorMapTest, TestGetColorPairs) {
     ColorMap colorMap;
     auto colorPairs = colorMap.getColorPairs();
 
     std::vector<std::pair<std::string, std::string>> expectedPairs = {
-        {"White", "Blue"}, {"White", "Orange"}, {"White", "Green"}, {"White", "Brown"}, {"White", "Slate"},
-        {"Red", "Blue"}, {"Red", "Orange"}, {"Red", "Green"}, {"Red", "Brown"}, {"Red", "Slate"},
-        {"Black", "Blue"}, {"Black", "Orange"}, {"Black", "Green"}, {"Black", "Brown"}, {"Black", "Slate"},
-        {"Yellow", "Blue"}, {"Yellow", "Orange"}, {"Yellow", "Green"}, {"Yellow", "Brown"}, {"Yellow", "Slate"},
-        {"Violet", "Blue"}, {"Violet", "Orange"}, {"Violet", "Green"}, {"Violet", "Brown"}, {"Violet", "Slate"}
+        {"White", "Blue"}, {"White", "Orange"}, 
+        {"White", "Green"}, {"White", "Brown"}, 
+        {"White", "Slate"},{"Red", "Blue"}, 
+        {"Red", "Orange"}, {"Red", "Green"}, 
+        {"Red", "Brown"}, {"Red", "Slate"},
+        {"Black", "Blue"}, {"Black", "Orange"}, 
+        {"Black", "Green"}, {"Black", "Brown"}, 
+        {"Black", "Slate"},{"Yellow", "Blue"}, 
+        {"Yellow", "Orange"}, {"Yellow", "Green"}, 
+        {"Yellow", "Brown"}, {"Yellow", "Slate"},
+        {"Violet", "Blue"}, {"Violet", "Orange"}, 
+        {"Violet", "Green"}, {"Violet", "Brown"}, 
+        {"Violet", "Slate"}
     };
 
     EXPECT_EQ(colorPairs, expectedPairs);
