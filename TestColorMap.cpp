@@ -1,7 +1,7 @@
-#include "ColorMap.h"
 #include <vector>
 #include <string>
 #include <gtest/gtest.h>
+#include "ColorMap.h"
 
 TEST(ColorMapTest, TestGetColorPairs) {
     ColorMap colorMap;
@@ -10,12 +10,12 @@ TEST(ColorMapTest, TestGetColorPairs) {
     std::vector<std::pair<std::string, std::string>> expectedPairs = {
         {"White", "Blue"}, {"White", "Orange"},
         {"White", "Green"}, {"White", "Brown"},
-        {"White", "Slate"},{"Red", "Blue"},
+        {"White", "Slate"}, {"Red", "Blue"},
         {"Red", "Orange"}, {"Red", "Green"},
         {"Red", "Brown"}, {"Red", "Slate"},
         {"Black", "Blue"}, {"Black", "Orange"},
         {"Black", "Green"}, {"Black", "Brown"},
-        {"Black", "Slate"},{"Yellow", "Blue"},
+        {"Black", "Slate"}, {"Yellow", "Blue"},
         {"Yellow", "Orange"}, {"Yellow", "Green"},
         {"Yellow", "Brown"}, {"Yellow", "Slate"},
         {"Violet", "Blue"}, {"Violet", "Orange"},
