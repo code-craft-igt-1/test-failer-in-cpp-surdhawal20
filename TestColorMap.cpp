@@ -1,8 +1,9 @@
+#include <gtest/gtest.h>
 #include <utility>
 #include <vector>
 #include <string>
-#include <gtest/gtest.h>
-#include "ColorMap.h"
+
+#include "./ColorMap.h"
 
 TEST(ColorMapTest, TestGetColorPairs) {
     ColorMap colorMap;
