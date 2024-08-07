@@ -1,6 +1,11 @@
-#include "TestColorMap.h"
+#include "ColorMap.h"
+#include <utility>
+#include <vector>
+#include <string>
+#include <gtest/gtest.h>
 
 TEST(ColorMapTest, TestGetColorPairs) {
+    ColorMap colorMap;
     auto colorPairs = colorMap.getColorPairs();
 
     std::vector<std::pair<std::string, std::string>> expectedPairs = {
