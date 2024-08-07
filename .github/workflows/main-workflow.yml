@@ -13,17 +13,14 @@ jobs:
         pip install cpplint
         cpplint  --filter=-legal --linelength=100 *.cpp
 
-    - name: tshirts fail
-      run: |
-        g++ -Wall -Wextra -Werror tshirts.cpp -o tshirts.out
-        bash .github/workflows/expectfail.sh ./tshirts.out
+    - name: setup cmake
+      run: sudo apt install cmake
 
-    - name: misaligned fail
+    - name: build
       run: |
-        g++ -Wall -Wextra -Werror misaligned.cpp -o misaligned.out
-        bash .github/workflows/expectfail.sh ./misaligned.out
-
-    - name: alerter fail
+        cmake -S . -B build
+        cmake --build build
+      
+    - name: FalsePositive
       run: |
-        g++ -Wall -Wextra -Werror weatherreport.cpp -o weatherreport.out
-        bash .github/workflows/expectfail.sh ./weatherreport.out
+        bash .github/workflows/expectfail.sh build/FalsePositive
