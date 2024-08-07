@@ -12,8 +12,14 @@ jobs:
       run: |
         pip install cpplint
         cpplint  --filter=-legal --linelength=100 *.cpp
+    - name: setup cmake
+      run: sudo apt install cmake
 
-    - name: FalsePossitive fail
+    - name: build
       run: |
-        g++ -Wall -Wextra -Werror *.cpp -o FalsePossitive.out
-        bash .github/workflows/expectfail.sh ./FalsePossitive.out
+        cmake -S . -B build
+        cmake --build build
+      
+    - name: FalsePositive fail
+      run: |
+        bash .github/workflows/expectfail.sh build/FalsePositive
