@@ -1,4 +1,3 @@
-// TestTshirtsSize.cpp
 #include <gtest/gtest.h>
 #include "TshirtsSize.h"
 
@@ -20,9 +19,4 @@ TEST(SizeTest, HandlesMediumSizeUpperBoundary) {
 
 TEST(SizeTest, HandlesLargeSize) {
     EXPECT_EQ(tshirtsSize(43), 'L');
-}
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }
