@@ -10,7 +10,7 @@ TEST(WeatherReporterTest, TestRainy) {
 }
 
 TEST(WeatherReporterTest, TestHighPrecipitationAndLowWindspeed) {
-    SensorStub sensor(26, 70, 72, 40);
+    SensorStub sensor(26, 70, 72, 30);
     WeatherReporter reporter(sensor);
     std::string report = reporter.Report();
     EXPECT_NE(report.find("rain"), std::string::npos);
