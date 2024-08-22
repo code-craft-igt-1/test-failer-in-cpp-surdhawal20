@@ -1,7 +1,7 @@
 #include "TshirtsSize.h"
 
 class TshirtSize {
-public:
+ public:
     // Function to get the size based on cms
     char getSizeInCms(int sizeInCms) const {
         if (sizeInCms < 38) {

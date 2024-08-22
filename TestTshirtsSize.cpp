@@ -3,7 +3,7 @@
 
 // Test case for TshirtSize class
 class TshirtSizeTest : public ::testing::Test {
-protected:
+ protected:
     TshirtSize tshirtSize;
 };
 
