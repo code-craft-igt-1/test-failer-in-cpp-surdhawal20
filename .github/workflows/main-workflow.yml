@@ -20,6 +20,6 @@ jobs:
         cmake -S . -B build
         cmake --build build
       
-    - name: FalsePositive fail
+    - name: false_possitive
       run: |
-        bash .github/workflows/expectfail.sh build/FalsePositive
+        bash .github/workflows/expectfail.sh build/false_possitive
