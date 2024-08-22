@@ -34,8 +34,8 @@ TEST(ColorMapTest, TestSpecificColorPairFormatting) {
     std::ostringstream colorPairStream;
     for (size_t i = 1; i <= colorPairs.size(); ++i) {
         colorPairStream << i << " , "
-            << colorPairs[i].second << " , "
-            << colorPairs[i].first << '\n';
+            << colorPairs[i].first << " , "
+            << colorPairs[i].second << '\n';
     }
     std::string formattedOutput = colorPairStream.str();
 
