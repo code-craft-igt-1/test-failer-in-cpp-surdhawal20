@@ -8,7 +8,7 @@
 std::string generateExpectedOutput(const ColorMap& colorMap) {
     std::vector<std::pair<std::string, std::string>> colorPairs = colorMap.getColorPairs();
     std::ostringstream colorPairStream;
-    for (size_t i = 1; i < colorPairs.size(); ++i) {
+    for (size_t i = 1; i <= colorPairs.size(); ++i) {
         colorPairStream << i << " , "
             << colorPairs[i].first << " , "
             << colorPairs[i].second << '\n';
