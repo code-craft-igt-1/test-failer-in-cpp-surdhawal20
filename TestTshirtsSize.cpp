@@ -3,7 +3,6 @@
 
 // Test case for TshirtSize class
 class TshirtSizeTest : public ::testing::Test {
-
     protected:
         TshirtSize tshirtSize;
 };
@@ -35,8 +34,7 @@ TEST_F(TshirtSizeTest, LargeSize) {
 // Test invalid input (boundary cases)
 TEST_F(TshirtSizeTest, InvalidInput) {
     // Handle small input case, default to 'S'
-    EXPECT_EQ(tshirtSize.getSizeInCms(0), 'S');  
+    EXPECT_EQ(tshirtSize.getSizeInCms(0), 'S');
     // Negative input, treated as invalid and returns 'S'
     EXPECT_EQ(tshirtSize.getSizeInCms(-10), 'S'); 
 }
-
