@@ -1,13 +1,18 @@
 #include "TshirtsSize.h"
 
-char tshirtsSize(int cms) {
-    char sizeName = '\0';
-    if (cms < 38) {
-        sizeName = 'S';
-    } else if (cms > 38 && cms < 42) {
-        sizeName = 'M';
-    } else if (cms > 42) {
-        sizeName = 'L';
+class TshirtSize {
+public:
+    // Function to get the size based on cms
+    char getSizeInCms(int sizeInCms) const {
+        if (sizeInCms < 38) {
+            return 'S';
+        }
+        else if (sizeInCms <= 42) {  // This simplifies the logic for M
+            return 'M';
+        }
+        else {
+            return 'L';
+        }
     }
-    return sizeName;
-}
+};
+

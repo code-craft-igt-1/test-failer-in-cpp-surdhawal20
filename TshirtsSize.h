@@ -1,7 +1,12 @@
-// TshirtsSize.h
-#ifndef TSHIRTSSIZE_H
-#define TSHIRTSSIZE_H
+// TshirtSize.h
 
-char tshirtsSize(int cms);
+#ifndef TSHIRTSIZE_H
+#define TSHIRTSIZE_H
 
-#endif // TSHIRTSSIZE_H
+class TshirtSize {
+public:
+    // Function to get the t-shirt size based on chest circumference in centimeters
+    char getSizeInCms(int sizeInCms) const;
+};
+
+#endif // TSHIRTSIZE_H

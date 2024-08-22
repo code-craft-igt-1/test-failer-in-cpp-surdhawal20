@@ -21,9 +21,9 @@ std::string ColorMap::formatColorMap() const {
     std::vector<std::pair<std::string, std::string>> colorPairs = getColorPairs();
     std::ostringstream colorPairStream;
     for (size_t i = 1; i < colorPairs.size(); ++i) {
-        colorPairStream << i << " | "
-            << colorPairs[i].second << " | "
-            << colorPairs[i].first << '\n';
+        colorPairStream << i << " , "
+            << colorPairs[i].first << " , "
+            << colorPairs[i].second << '\n';
     }
     return colorPairStream.str();
 }
